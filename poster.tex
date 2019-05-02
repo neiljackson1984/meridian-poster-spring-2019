@@ -7,7 +7,7 @@
 
 %%% PACKAGES
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
-\usepackage[letterpaper,top=0.45in,bottom=0.5in,left=0.75in,right=0.75in]{geometry}
+\usepackage[letterpaper,top=0.65in,bottom=0.7in,left=0.75in,right=0.75in]{geometry}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{tikzrput}
@@ -25,10 +25,10 @@
 \def\fontASize{48}
 \newcommand{\fontA}{\fontsize{\fontASize}{\fontASize}\fontspec{Garamond}}
 
-\def\fontBSize{24}
+\def\fontBSize{28}
 \newcommand{\fontB}{\fontsize{\fontBSize}{\fontBSize}\fontspec{Garamond}}
 
-\def\fontCSize{38}
+\def\fontCSize{32}
 \newcommand{\fontC}{\fontsize{\fontCSize}{\fontCSize}\fontspec{Garamond}}
 
 \def\fontDSize{18}
@@ -59,12 +59,13 @@
 %%% BORDER:
 \begin{tikzpicture}[overlay,remember picture]
     \draw [line width=3pt,rounded corners=15pt,double]
-        ($ (current page.north west) + (0.35in,-0.35in) $)
+        ($ (current page.north west) + (0.43in,-0.55in) $)
         rectangle
-        ($ (current page.south east) + (-0.35in,0.35in) $);
+        ($ (current page.south east) + (-0.43in,0.55in) $);
 \end{tikzpicture}%
-\hbox to \hsize{\hbox{\fontD{}www.meridianensemble.net}\hfil\hbox{\fontD{}info@meridianensemble.net}}
-% \vskip 1.7in%
+% \hbox to \hsize{\hbox{\fontD{}www.meridianensemble.net}\hfil\hbox{\fontD{}info@meridianensemble.net}}
+\hbox to \hsize{\hbox{\fontD{}info@meridianensemble.net}\hfil\hbox{\fontD{}}}
+\vskip -0.1in%
 
 \hbox to \hsize{
     % \vbox to 1.7in{%
@@ -74,7 +75,7 @@
     \hfill
     \vbox to 1.2in{%
         \vfill%
-        \hbox{\pgfornament[height=2in]{160}}
+        \hbox{\pgfornament[height=2.3in]{160}}
     }%
 }
 {\centering
@@ -92,16 +93,16 @@
     \hfill%
     \vbox{\hsize=6in
         \begin{center}
-        \fontB{}Choral gems from Latvia, Russia, Spain, England, and the United States
+        \fontB{}Choral gems from Latvia, Russia, Spain, \hbox{Great Britain}, and the United States
         \vskip 0.2in
-        \fontB{}Passionately sung by 15 chamber singers    
+        % \fontB{}Passionately sung by 15 chamber singers    
         \end{center}
     }%
     \hfill%
 }%
 \vfill%
 \begin{center}%
-\fontB{}Yuly Kopkin, Artistic Director%
+\fontC{}\textbf{Yuly Kopkin, Artistic Director}%
 \end{center}%
 \vfill%
 % \hbox to \hsize{
@@ -143,7 +144,7 @@
 \vskip 0.3in
 \begin{center}
 % {\fontD{}Admission \textendash{} \$15}
-{\fontD{}Free admission \textendash{} Donations are welcome (suggested donation \$15).}
+{\fontD{}Free admission; donations are welcome (suggested donation \$15).}
 \end{center}
 \vskip 0.0in
 % \hbox to \hsize {\hfil\pgfornament[scale=1]{89}\hfil}
